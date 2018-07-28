@@ -1,0 +1,6 @@
+test:
+    database: bob
+    hostname: localhost
+    username: root
+    password: testing123
+    port: 3306
