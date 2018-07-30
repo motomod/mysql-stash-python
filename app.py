@@ -48,6 +48,10 @@ if args.action == "create":
     stash.close()
 
 if args.action == "list":
+    if os.path.isdir(databasepath) == False:
+        print 'No stashes for this database'
+        quit()
+
     files = os.listdir(databasepath)
     for file in files:
         print(file)
