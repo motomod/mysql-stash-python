@@ -11,13 +11,13 @@ MySQL-Stash is a small, light-weight utility for quickly backing up and restorin
 
 ## Requirements
   - Python 2.7 (may work on later versions, but untested)
-  - Python packages (yaml, subprocess, MySQLDB)
+  - Python packages (yaml, subprocess)
 
 ## Installation
 
 ### Ubuntu
 ```sh
-$ sudo apt install python2.7 python-pip python-mysqldb libmysqlclient-dev
+$ sudo apt install python2.7 mysql-client
 ```
 
 ## Configuration
@@ -61,4 +61,4 @@ $ python app.py exampledb view feature2
 
 ## Thoughts
 
-My original version of this made a system call to 'mysqldump', which saves a lot of work, however I wanted this to be as cross-platform friendly as possible.
+I had hoped to not run a system command to dump the database, but mysqldump takes a lot of things into consideration when dumping database (like foreign keys) so I will use that for now.
