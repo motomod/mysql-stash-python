@@ -28,7 +28,7 @@ Databases need to be configured before running the app. Databases need to be con
 ```sh
 $ python app.py [-h] database [action] stash_name
 ```
-database - The name given to the database in the databases.yml file.
+database - The name given to the database in the databases.yml file. This can be 'all' to backup all databases at once.
 action - 'create'/'apply'/'view'/'list'
 
 #### Creating a stash
